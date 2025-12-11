@@ -24,10 +24,10 @@ Gene prioritisation is driven primarily by:
 
 Layer-specific MR statistics collectively inform the latent embedding:
 
--β, SE, p, FDR
--MR causal score
--nsnp
--proteomic, CpG/methylation, glycomic, and single-cell MR support
+1) β, SE, p, FDR
+2) MR causal score
+3) nsnp
+4) proteomic, CpG/methylation, glycomic, and single-cell MR support
 
 2. MTI score (supervised regression target)
 
@@ -40,8 +40,8 @@ The final gene ranking is no longer based solely on MTI predictions.
 
 A hybrid score combines:
 
--z(MTI_pred) — supervised regression output
--z(multi_prob) — probability a gene has ≥2 supported omic layers
+1) z(MTI_pred) — supervised regression output
+2) z(multi_prob) — probability a gene has ≥2 supported omic layers
 
 The hybrid score rewards genes with strong multi-omic evidence, correcting under-ranking of biologically important regulators (e.g., SIRT1) caused by structural biases.
 
@@ -70,12 +70,12 @@ Dimensionality reduced via PCA (pc1, pc2, pc3 for each layer).
 Graph Topology (kNN network):
 
 From a similarity-based kNN graph (k=15):
--degree
--PageRank
--eigenvector centrality
--betweenness
--closeness
--clustering coefficient
+1) degree
+2) PageRank
+3) eigenvector centrality
+4) betweenness
+5) closeness
+6) clustering coefficient
 
 Topology helps the model recognise context-dependent functional modules.
 
@@ -95,18 +95,18 @@ L=MSE(MTI_score)+λ⋅BCE(multi-layer label)
 L=MSE(MTI_score)+λ⋅BCE(multi-layer label)
 
 This jointly enforces:
--alignment with MTI (causal strength)
--recognition of multi-omic support (robustness)
+1) alignment with MTI (causal strength)
+2) recognition of multi-omic support (robustness)
 
 Summary:
 
 Deep learning meets multi-omic causal inference.
 This GAT integrates:
--MR causal evidence
--Multi-omic MTI supervision
--AlphaFold v6 structural properties
--PANTHER-derived functional categories
--Graph topology context
+1) MR causal evidence
+2) Multi-omic MTI supervision
+3) AlphaFold v6 structural properties
+4) PANTHER-derived functional categories
+5) Graph topology context
 
 to deliver a structure-aware, evidence-integrated prioritisation of exercise-responsive genes.
 
