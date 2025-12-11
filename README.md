@@ -7,7 +7,7 @@ The model integrates:
 
 - **Mendelian randomisation (MR) causal signals** across four omics,
 - the **multi-omic MTI (Modfied Trait Importance) score**,
-- **AlphaFold2 structural descriptors**,
+- **AlphaFold v6 structural descriptors**,
 - **PANTHER functional annotations** (4 layers),
 - **graph topology metrics** extracted from a kNN gene–gene network.
 
