@@ -11,7 +11,7 @@ The model integrates:
 1) Mendelian randomisation (MR) causal signals across four omic layers
 2) MTI (Modified Trait Importance) as a supervised regression target
 3) AlphaFold v6 structural descriptors (pLDDT distributions, uncertainty, disorder/exposure, length)
-4) PANTHER functional annotations (protein class, MF, BP, pathway/components; 4-level structure)
+4) Uniprot, Interpro, PANTHER functional annotations (protein class, MF, BP, pathway/components; 4-level structure)
 5) Topology metrics from a kNN graph (k=15): PageRank, eigenvector centrality, betweenness, clustering, etc.
 
 These heterogeneous data streams are embedded via a two-layer GAT to produce biologically contextualised, structure-aware prioritisation of exercise-responsive genes.
@@ -64,6 +64,8 @@ PANTHER Functional Structure (4 layers):
 2) Molecular function
 3) Biological process
 4) Pathway / component hierarchy
+
+UniProt keywords + InterPro domain annotations
 
 Dimensionality reduced via PCA (pc1, pc2, pc3 for each layer).
 
