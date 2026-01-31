@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-train_GNN_EXERCISE_SUP_MTI_MULTI_AFv6_HYBRID_v2.py
 
 Updated supervised GAT trainer:
  - robust to different MR p column names and '_fixed' patched MR columns
